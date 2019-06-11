@@ -55,8 +55,7 @@ const setup = (() => {
                 return;
             }
         }
-
-    } // End of playRound func
+    }
 
     function computerWin() {
         jumbotronOutput.textContent = "Computer wins the round!";

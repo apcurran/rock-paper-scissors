@@ -34,7 +34,7 @@ header {
 }
 
 .score-board-container section {
-    margin: 1em 3em;
+    margin: 1em 2em;
     border: 3px solid #fff;
     border-radius: 4px;
     width: 12em;
@@ -46,7 +46,7 @@ header {
 .user-label {
     position: absolute;
     display: inline-block;
-    background-color: orange;
+    background-color: #ed5c1a;
     top: -18px;
     left: 59px;
     padding: .1em .4em;
@@ -55,7 +55,7 @@ header {
 .computer-label {
     position: absolute;
     display: inline-block;
-    background-color: orange;
+    background-color: #ed5c1a;
     top: -18px;
     left: 29px;
     padding: .1em .4em;
@@ -72,6 +72,12 @@ header {
     font-size: 2rem;
     font-weight: 600;
     letter-spacing: .03em;
+    text-align: center;
+}
+
+.jumbotron-container p span {
+    color: red;
+    font-size: 1.4rem;
 }
 
 .btn {
@@ -83,6 +89,7 @@ header {
     border: 4px solid #f0f0f0;
     cursor: pointer;
     margin: 0 1.4em;
+    background-repeat: no-repeat;
 }
 
 .btn:hover {
@@ -102,4 +109,47 @@ header {
 .btn-scissors {
     background-image: url(images/scissors.png);
     background-size: 100%;
+}
+
+@media screen and (max-width: 39em) {
+    header {
+        font-size: .95rem;
+    }
+
+    .score-board-container section {
+        margin: .25em;
+        width: 10em;
+        height: 5em;
+    }
+
+    .jumbotron-container p {
+        font-size: 1.5rem;
+    }
+
+    .jumbotron-container p span {
+        font-size: 1rem;
+    }
+
+    .user-score,
+    .computer-score {
+        margin-top: .5em; 
+    }
+
+    .user-label {
+        top: -18px;
+        left: 45px;
+        padding: .1em .4em;
+    }
+    
+    .computer-label {
+        top: -18px;
+        left: 12px;
+        padding: .1em .4em;
+    }
+
+    .btn {
+        width: 6.5em;
+        height: 6.5em;
+        margin: 0 .75em;
+    }
 }
