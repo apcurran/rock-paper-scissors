@@ -82,7 +82,7 @@ header {
     outline: none;
     border: 4px solid #f0f0f0;
     cursor: pointer;
-    margin: 0 1em;
+    margin: 0 1.4em;
 }
 
 .btn:hover {
