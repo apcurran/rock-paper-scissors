@@ -26,10 +26,10 @@ const setup = (() => {
         // Check for rock.
         if (playerSelection === "rock") {
             if(compSelection === "scissors") {
-                playerWin();
+                playerWin(playerSelection, compSelection);
                 return;
             } else {
-                computerWin();
+                computerWin(playerSelection, compSelection);
                 return;
             }
         }
@@ -37,10 +37,10 @@ const setup = (() => {
         // Check for paper.
         if (playerSelection === "paper") {
             if (compSelection === "rock") {
-                playerWin();
+                playerWin(playerSelection, compSelection);
                 return;
             } else {
-                computerWin();
+                computerWin(playerSelection, compSelection);
                 return;
             }
         }
@@ -48,23 +48,23 @@ const setup = (() => {
         // Check for scissors.
         if (playerSelection === "scissors") {
             if (compSelection === "paper") {
-                playerWin();
+                playerWin(playerSelection, compSelection);
                 return;
             } else {
-                computerWin();
+                computerWin(playerSelection, compSelection);
                 return;
             }
         }
     }
 
-    function computerWin() {
-        jumbotronOutput.textContent = "Computer wins the round!";
+    function computerWin(playerSelection, compSelection) {
+        jumbotronOutput.textContent = `Computer (${compSelection}) beats the user (${playerSelection})!`;
         computerScore++;
         updateScore();
     }
 
-    function playerWin() {
-        jumbotronOutput.textContent = "User wins the round!";
+    function playerWin(playerSelection, compSelection) {
+        jumbotronOutput.textContent = `User (${playerSelection}) beats the computer (${compSelection})!`;
         playerScore++;
         updateScore();
     }
